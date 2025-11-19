@@ -1,5 +1,5 @@
-# EdgeGuard - Enterprise CDN & Edge Computing Platform
-
+# Flarealt - Enterprise CDN & Edge Computing Platform
+<!--
 A production-grade Cloudflare alternative providing CDN, DDoS protection, DNS management, WAF, and edge computing capabilities.
 
 ## 🚀 Features
@@ -43,3 +43,4 @@ make build
 ## 📄 License
 
 Apache 2.0
+-->
