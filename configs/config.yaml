@@ -1,0 +1,58 @@
+node:
+  id: "edge-us-east-1"
+  region: "us-east-1"
+  datacenter: "us-east-1a"
+
+server:
+  http_port: 8080
+  https_port: 8443
+  admin_port: 9090
+  read_timeout: "30s"
+  write_timeout: "30s"
+  max_header_size: 1048576
+
+cache:
+  max_size: "10GB"
+  ttl_default: 3600
+  redis_url: "redis://localhost:6379/0"
+  redis_db: 0
+
+security:
+  ddos_threshold: 1000
+  rate_limit_default: 100
+  enable_waf: true
+  enable_bot_detect: true
+  block_tor_nodes: false
+  challenge_on_suspect: false
+
+dns:
+  listen_port: 53
+  upstream_resolvers:
+    - "1.1.1.1:53"
+    - "8.8.8.8:53"
+  enable_geodns: true
+  ttl_default: 300
+
+database:
+  host: "localhost"
+  port: 5432
+  user: "edgeguard"
+  password: "changeme"
+  database: "edgeguard"
+  ssl_mode: "disable"
+
+nats:
+  urls:
+    - "nats://localhost:4222"
+
+origins:
+  - name: "default"
+    host: "httpbin.org"
+    port: 443
+    protocol: "https"
+    weight: 100
+    health_check:
+      enabled: true
+      interval: "30s"
+      timeout: "5s"
+      path: "/status/200"

@@ -1,0 +1,47 @@
+# Binaries
+bin/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# Output of the go coverage tool
+*.out
+coverage.txt
+
+# Dependency directories
+vendor/
+
+# Go workspace file
+go.work
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Config overrides
+configs/config.local.yaml
+
+# Data directories
+data/
+*.db
+
+# Documentation files (generated/summary)
+SUMMARY.md
+FEATURES.md
+ARCHITECTURE.md
+TESTING.md
+PROJECT_COMPLETE.md
